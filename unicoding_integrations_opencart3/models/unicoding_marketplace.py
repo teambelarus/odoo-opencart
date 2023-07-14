@@ -169,7 +169,7 @@ class UnicodingMarketplace(models.Model):
 
     def opencart_request(self, url, params={}, method="get"):
         for opencart_id in self:
-            headers = {'content-type': 'application/x-www-form-urlencoded'}
+            headers = {'content-type': 'application/x-www-form-urlencoded', 'User-Agent': 'OpenCart Odoo Connector'}
             try:
                 # _logger.info(params)
                 # print(params)
